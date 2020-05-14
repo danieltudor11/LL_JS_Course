@@ -1,0 +1,29 @@
+<code><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Chat Apppcation</title>
+</head>
+	
+
+<body>
+	<header>
+		<h1>My Chatting Application</h1>
+	</header>
+	<main>
+		<ol id="history">
+		</ol>
+		<form>
+			<input id="initials" maxlength="2">
+			<input id="message">
+			<button>Send</button>
+		</form>
+	</main>
+</body>
+</code>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+
