@@ -10,6 +10,7 @@ var io = require('socket.io')(server);
 
 io.on('connection', function(socket) {
 	socket.on('message', function (msg) {
+		console.log('Received Message: ', msg);
 		io.emit('message', msg);
 	});
 });
