@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
-	<title>Chat Apppcation</title>
+	<title>Chat Application</title>
 </head>
 	
 
@@ -11,6 +11,8 @@
 	<header>
 		<h1>My Chatting Application</h1>
 	</header>
+
+	<div id="timer"></div>
 	<main>
 		<ol id="history">
 		</ol>
@@ -22,6 +24,20 @@
 	</main>
 </body>
 </code>
+<script type="text/javascript">
+
+	function showTime(){
+		var d = new Date();
+
+		document.getElementById("timer").innerText = d.toLocaleTimeString();
+		document.getElementById("timer").textContent = d.toLocaleTimeString();
+
+		setTimeout(showTime, 1000);
+	}
+
+	showTime();
+
+</script>
 
 <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script src="/socket.io/socket.io.js"></script>
