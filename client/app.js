@@ -4,7 +4,8 @@ $('form').on('submit',function () {
 	var text = $('#message').val();
 	var who = $('#initials').val();
 
-	socket.emit('message', who + ": " + text);
+	socket.emit('message', "[" + (new Date().toLocaleTimeString('en-US', {hour: "numeric",
+																	minute: "numeric"})) + "] " + who + ": " + text);
 	$('#message').val('');
 
 	return false;
